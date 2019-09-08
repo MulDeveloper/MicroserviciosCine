@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Datos afiliado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+    <body>
+        <form th:action="@{/altaTrailer}" th:object="${TrailerPelicula}" method="post">
+        <div class="form-group" th:object="${Pelicula}">
+                <label>Id pelicula:</label>
+                <input type="text" class="form-control" th:field="${Pelicula.id}">
+                <label>Titulo pelicula:</label>
+                <input type="text" class="form-control" th:field="${Pelicula.nombrePelicula}">
+                <label>Enlace trailer:</label>
+                <input type="text" class="form-control" th:field="${TrailerPelicula.link}">
+                
+                <br>
+                <button type="submit" class="btn-primary">Guardar</button>
+        </div>
+        </form>
+
+    </body>
+</html>

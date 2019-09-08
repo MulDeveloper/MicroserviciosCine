@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Add Film</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+
+    </head>
+    <body>
+        <div>
+            <p>Pelicula</p>
+        
+        <form action="#" th:action="@{/altaPeliculaBd}" th:object="${Pelicula}" method="post">
+            <div class="form-group" >
+                <label>Nombre Pelicula:</label>
+                <input type="text" class="form-control" th:field="*{nombrePelicula}">
+                <label>Director:</label>
+                <input type="text" class="form-control" th:field="*{director}">
+                <label>Fecha estreno:</label>
+                <input type="text" class="form-control" th:field="*{fechaEstreno}">
+            </div>
+
+            <br>
+            <button type="submit" class="btn-primary">Insertar</button>
+            </div>
+        </form>    
+    </body>
+</html>

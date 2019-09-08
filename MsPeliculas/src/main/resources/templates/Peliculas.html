@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Peliculas</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+    </head>
+    <body>
+        
+        <div class="divprinci"><p>Peliculas Cine</p>
+        <br>
+       
+        <table class="table">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Director</th>
+                <th scope="col">Fecha estreno</th>
+                <th>Añadir trailer</th>
+                <th>Añadir cartel</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr th:each="Pelicula : ${listaPeliculas}">
+                <td scope="row" th:text="${Pelicula.id}"></td>
+                <td scope="row" th:text="${Pelicula.nombrePelicula}"></td>
+                <td scope="row" th:text="${Pelicula.director}"></td>
+                <td scope="row" th:text="${Pelicula.fechaEstreno}"></td>
+                <td><a th:href="${'/insertarTrailer/' + Pelicula.id}"><button type="submit" class="btn-primary">Trailer</button></a></td>
+                <td><a th:href="${'/insertarCartel/' + Pelicula.id}"><button type="submit" class="btn-primary">Cartel</button></a></td>
+                <td><a th:href="${'/eliminarPelicula/' + Pelicula.id}"><button type="submit" class="btn-primary">Eliminar</button></a></td>
+            </tr>
+        </table>
+        <br>
+        <a href="/"><button type="submit" class="btn-primary">Volver</button></a>
+        </div>
+            
+    </body>
+</html>
