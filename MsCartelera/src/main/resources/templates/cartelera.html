@@ -25,12 +25,11 @@
         </div>
 
           <div class="peliculas" th:each="Pelicula : ${listaPeliculas}">
-            <div class="movie" th:each="CartelPelicula : ${listaCarteles}">
                 <a th:href="${'http://localhost:9090/showTrailer/' + Pelicula.id}">
-                    <img src="../static/img/cartel0.jpg" alt="" />
+                    <img th:src="@{'/img/cartel'+${Pelicula.id}+'.jpg'}" width="160" height="215"/>
                 </a>
+              <p th:text="${Pelicula.nombrePelicula}" class="titulo"></p></div>
             </div>
-          <p th:text="${Pelicula.nombrePelicula}" class="titulo"></p></div>
         </div>
       </div>   
       </div>

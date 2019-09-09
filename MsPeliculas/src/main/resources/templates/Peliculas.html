@@ -18,7 +18,6 @@
                 <th scope="col">Director</th>
                 <th scope="col">Fecha estreno</th>
                 <th>Añadir trailer</th>
-                <th>Añadir cartel</th>
                 <th>Eliminar</th>
             </tr>
             <tr th:each="Pelicula : ${listaPeliculas}">
@@ -27,7 +26,6 @@
                 <td scope="row" th:text="${Pelicula.director}"></td>
                 <td scope="row" th:text="${Pelicula.fechaEstreno}"></td>
                 <td><a th:href="${'/insertarTrailer/' + Pelicula.id}"><button type="submit" class="btn-primary">Trailer</button></a></td>
-                <td><a th:href="${'/insertarCartel/' + Pelicula.id}"><button type="submit" class="btn-primary">Cartel</button></a></td>
                 <td><a th:href="${'/eliminarPelicula/' + Pelicula.id}"><button type="submit" class="btn-primary">Eliminar</button></a></td>
             </tr>
         </table>

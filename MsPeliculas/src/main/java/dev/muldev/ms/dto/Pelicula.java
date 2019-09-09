@@ -24,6 +24,9 @@ public class Pelicula {
     private String director;
     @Column(name="FECHA_PELICULA")
     private String fechaEstreno;
+    @Lob
+    @Column(name="CARTEL_PELICULA")
+    private byte[] image;
 
     public Pelicula() {
     }
@@ -58,6 +61,14 @@ public class Pelicula {
 
     public void setFechaEstreno(String fechaEstreno) {
         this.fechaEstreno = fechaEstreno;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     

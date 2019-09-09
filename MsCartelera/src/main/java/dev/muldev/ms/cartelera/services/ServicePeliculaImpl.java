@@ -17,12 +17,6 @@ public class ServicePeliculaImpl implements ServicePelicula{
     public List<Pelicula> listarPeliculas() {
         return dao.findAll();
     }
-
-    @Override
-    public Byte[] cargarImagen(int id) {
-        return dao.getOne(id).getImage();
-    }
-    
     
     
 }

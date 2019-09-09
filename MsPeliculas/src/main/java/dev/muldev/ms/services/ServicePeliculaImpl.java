@@ -16,6 +16,7 @@ public class ServicePeliculaImpl implements ServicePelicula{
     @Override
     public int altaPelicula(Pelicula p) {
         try{
+            
             dao.save(p);
             return 1;
         }
@@ -44,5 +45,7 @@ public class ServicePeliculaImpl implements ServicePelicula{
     public Pelicula getPelicula(int id) {
         return dao.getOne(id);
     }
+
+    
     
 }

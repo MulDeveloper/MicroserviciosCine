@@ -3,6 +3,7 @@ package dev.muldev.ms.services;
 
 import dev.muldev.ms.dto.Pelicula;
 import java.util.List;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public interface ServicePelicula {

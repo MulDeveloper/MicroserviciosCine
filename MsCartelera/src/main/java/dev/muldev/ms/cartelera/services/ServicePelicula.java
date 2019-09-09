@@ -7,7 +7,5 @@ import java.util.List;
 
 public interface ServicePelicula {
     public List <Pelicula> listarPeliculas();
-    
-    public Byte[] cargarImagen(int id);
 
 }

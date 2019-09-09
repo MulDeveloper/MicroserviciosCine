@@ -12,7 +12,7 @@
         <div>
             <p>Pelicula</p>
         
-        <form action="#" th:action="@{/altaPeliculaBd}" th:object="${Pelicula}" method="post">
+        <form action="#" th:action="@{/altaPeliculaBd}" th:object="${Pelicula}" method="post" enctype="multipart/form-data">
             <div class="form-group" >
                 <label>Nombre Pelicula:</label>
                 <input type="text" class="form-control" th:field="*{nombrePelicula}">
@@ -20,6 +20,7 @@
                 <input type="text" class="form-control" th:field="*{director}">
                 <label>Fecha estreno:</label>
                 <input type="text" class="form-control" th:field="*{fechaEstreno}">
+                <input type="file" class="form-control" name="imagen">  
             </div>
 
             <br>

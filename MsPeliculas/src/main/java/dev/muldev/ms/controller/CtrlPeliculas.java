@@ -1,10 +1,8 @@
 
 package dev.muldev.ms.controller;
 
-import dev.muldev.ms.dto.CartelPelicula;
 import dev.muldev.ms.dto.Pelicula;
 import dev.muldev.ms.dto.TrailerPelicula;
-import dev.muldev.ms.services.ServiceCartel;
 import dev.muldev.ms.services.ServicePelicula;
 import dev.muldev.ms.services.ServiceTrailer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @Controller
@@ -36,11 +36,11 @@ public class CtrlPeliculas {
     
     
     @RequestMapping(value = "/altaPeliculaBd", method = RequestMethod.POST)
-    public String altaPeliculaEnBd(Pelicula p){
-        
+    public String altaPeliculaEnBd(Pelicula p, @RequestParam(value="imagen") MultipartFile file){
+    
         try{
+            p.setImage(file.getBytes());
             service.altaPelicula(p);
-
             return "success";
         }
         catch(Exception e){
