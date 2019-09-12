@@ -5,6 +5,17 @@
 <title>Cines meridiano oriental</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<style>
+table, th, td {
+  padding-top: 40px;
+}
+th, td {
+  padding: 15px;
+}
+p{
+    text-align: center;
+}
+</style>
 </head>
 <body>
 <!-- START PAGE SOURCE -->
@@ -24,12 +35,18 @@
           <h2>PELICULAS</h2>
         </div>
 
-          <div class="peliculas" th:each="Pelicula : ${listaPeliculas}">
-                <a th:href="${'http://localhost:9090/showTrailer/' + Pelicula.id}">
-                    <img th:src="@{'/img/cartel'+${Pelicula.id}+'.jpg'}" width="160" height="215"/>
-                </a>
-              <p th:text="${Pelicula.nombrePelicula}" class="titulo"></p></div>
+          <table>
+              <tr>
+                  <td th:each="Pelicula : ${listaPeliculas}">
+                    <a th:href="${'http://localhost:9090/showTrailer/' + Pelicula.id}">
+                    <img th:src="@{'/img/cartel'+${Pelicula.id}+'.jpg'}" width="160" height="215"/>    
+                    </a>
+                    <p th:text="${Pelicula.nombrePelicula}" class="titulo"></p>
+                  </td>
+              </tr>
             </div>
+        </table>
+          
         </div>
       </div>   
       </div>

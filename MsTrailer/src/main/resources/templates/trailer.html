@@ -8,8 +8,8 @@
 
     </head>
     <body>
-        <div th:object="${Trailer}" class="d-flex p-2">
-            <iframe width="800" height="600"
+        <div th:object="${Trailer}">
+            <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
             th:src="@{'https://www.youtube.com/embed/' + ${Trailer.link}}">
             </iframe>
               

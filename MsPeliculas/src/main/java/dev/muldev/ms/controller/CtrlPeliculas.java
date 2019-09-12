@@ -28,6 +28,7 @@ public class CtrlPeliculas {
     public String retornaIndice(){
         return "administracionCine";
     }
+    
     @GetMapping("/insertarPelicula")
     public String retornaAddPelicula(Model m){
         m.addAttribute("Pelicula", new Pelicula());
