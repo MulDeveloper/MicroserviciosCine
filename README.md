@@ -1,5 +1,5 @@
 # MicroserviciosCine
-Ejemplo muy simple de distintos microservicios para la gestión de la cartelera de un cine usando Spring Boot, JPA, Hibernate, Oracle DB ThyMeLeaf y Boostrap.
+Ejemplo muy simple de distintos microservicios para la gestión de la cartelera de un cine usando Spring Boot, JPA, Hibernate, Oracle DB ThyMeLeaf y Bootstrap.
 
 ![cartelera](https://github.com/MulDeveloper/MicroserviciosCine/blob/master/cartelera.jpg)
 
